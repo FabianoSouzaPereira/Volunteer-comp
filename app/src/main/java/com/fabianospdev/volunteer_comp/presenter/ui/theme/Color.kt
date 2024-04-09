@@ -1,4 +1,4 @@
-package com.fabianospdev.volunteer_comp.ui.theme
+package com.fabianospdev.volunteer_comp.presenter.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
