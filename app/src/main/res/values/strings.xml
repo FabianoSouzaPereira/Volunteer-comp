@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">Volunteer-comp</string>
     <string name="title_activity_login">LoginActivity</string>
+    <string name="e_mail">E-mail:</string>
+    <string name="password">Password:</string>
+    <string name="logo">Logo</string>
+    <string name="home">Home</string>
+    <string name="login">Login</string>
+    <string name="log_in">Log in</string>
 </resources>

@@ -51,8 +51,6 @@ android {
 }
 
 dependencies {
-    implementation(libs.androidx.navigation.testing)
-    val navVersion = "2.7.7"
     implementation(libs.androidx.runner)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -64,36 +62,44 @@ dependencies {
     implementation(libs.androidx.material3)
     implementation(libs.androidx.hilt.navigation.compose)
     implementation(libs.androidx.lifecycle.viewmodel.compose)
-
+    implementation(libs.androidx.espresso.core)
     implementation(libs.androidx.espresso.idling.resource)
     implementation(libs.androidx.junit.ktx)
     implementation(libs.mockito.bom)
     implementation(libs.mockito.core)
-
-    androidTestImplementation(libs.androidx.junit)
+    implementation(libs.androidx.navigation.testing)
+    implementation(libs.play.services.auth)
+    implementation(libs.androidx.credentials)
+    implementation(libs.gson)
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
-    androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.ui.test.junit4)
 
+    // Test rules and transitive dependencies:
+    androidTestImplementation(libs.ui.test.junit4)
+    debugImplementation(libs.ui.test.manifest)
     // For Robolectric tests.
-    testImplementation("com.google.dagger:hilt-android-testing:2.44")
+    testImplementation(libs.hilt.android.testing)
     // For instrumented tests.
-    androidTestImplementation("com.google.dagger:hilt-android-testing:2.44")
+    androidTestImplementation(libs.hilt.android.testing)
 
     /** Navegation control  */
     // Java language implementation
-    implementation("androidx.navigation:navigation-fragment:$navVersion")
-    implementation("androidx.navigation:navigation-ui:$navVersion")
+    implementation(libs.androidx.navigation.fragment)
+    implementation(libs.androidx.navigation.ui)
     // Kotlin
-    implementation("androidx.navigation:navigation-fragment-ktx:$navVersion")
-    implementation("androidx.navigation:navigation-ui-ktx:$navVersion")
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
     // Feature module Support
-    implementation("androidx.navigation:navigation-dynamic-features-fragment:$navVersion")
+    implementation(libs.androidx.navigation.dynamic.features.fragment)
     // Testing Navigation
-    androidTestImplementation("androidx.navigation:navigation-testing:$navVersion")
+    androidTestImplementation(libs.androidx.navigation.testing.v277)
     // Jetpack Compose Integration
-    implementation("androidx.navigation:navigation-compose:$navVersion")
+    implementation(libs.androidx.navigation.compose)
 }

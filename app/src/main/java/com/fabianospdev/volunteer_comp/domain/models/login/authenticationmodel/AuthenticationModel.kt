@@ -1,0 +1,3 @@
+package com.fabianospdev.volunteer_comp.domain.models.login.authenticationmodel
+
+class AuthenticationModel
