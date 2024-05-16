@@ -52,7 +52,7 @@ import com.fabianospdev.volunteer_comp.montserratFamily
 
 
 @Composable
-fun LoginScreen(navController: NavHostController, name: String, context: Context?) {
+fun Login(navController: NavHostController, name: String, context: Context?) {
 
     var username by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
